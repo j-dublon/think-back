@@ -4,17 +4,32 @@
   box-sizing: border-box;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
   background-color: #f8f8ff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: "100%";
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.header__title {
+  font-family: "Nanum Myeongjo", serif;
+  color: #0d898b;
+  font-size: 70px;
+  font-weight: 200;
+}
+
+.taskView {
+  padding-top: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
@@ -29,9 +44,9 @@ body {
   border: 2px solid #7e6cd7;
 }
 
-.card_title {
-  font-family: "Abhaya Libre", serif;
+.card__title {
+  font-family: "Roboto", sans-serif;
   color: #0d898b;
   font-size: 190px;
-  font-weight: 100;
+  font-weight: 400;
 }
