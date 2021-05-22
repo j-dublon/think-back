@@ -1,15 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import useData from '../../data/useData';
 
 const IntroView = () => {
   // ** ** ** ** HOOKS ** ** ** **
+  const { userName } = useData();
+
   // ** ** ** ** LOCAL ** ** ** **
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **
   return (
     <main className="intro">
-      <h3 className="intro__title">This game is easy!</h3>
+      <h3 className="intro__title">{`Hi ${userName}. This game is easy!`}</h3>
       <h4 className="intro__text">We will show you a letter...</h4>
       <div className="intro__text__container">
         <h4 className="intro__text">...if it matches the letter before last, click the tick button:</h4>
@@ -20,7 +23,7 @@ const IntroView = () => {
         <FontAwesomeIcon icon={ faTimesCircle } size="2x" color="#13070c" className="intro__text_icon"/>
       </div>
       <h4 className="intro__text">Ready?</h4>
-      <a href="#" className="intro__button">START</a>
+      <a href="/task" className="intro__button">START</a>
     </main>
   )
 }
