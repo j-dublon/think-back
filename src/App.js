@@ -1,6 +1,6 @@
 import "./App.css";
 import NavBar from "./components/navigation/NavBar";
-import IntroView from "./components/screens/IntroView";
+import EndView from "./components/screens/EndView";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <h1 className="header__title">Think Back</h1>
         <NavBar />
       </header>
-      <IntroView />
+      <EndView />
     </body>
   );
 }

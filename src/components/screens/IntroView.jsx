@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 const IntroView = () => {
+  // ** ** ** ** HOOKS ** ** ** **
+  // ** ** ** ** LOCAL ** ** ** **
+  // ** ** ** ** LOGIC ** ** ** **
+  // ** ** ** ** RENDER ** ** ** **
   return (
     <main className="intro">
       <h3 className="intro__title">This game is easy!</h3>

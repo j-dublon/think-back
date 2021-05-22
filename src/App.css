@@ -27,7 +27,8 @@ body {
 }
 
 .nav__button,
-.intro__button {
+.intro__button,
+.end__button {
   font-family: "Nanum Myeongjo", serif;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -43,14 +44,16 @@ body {
 }
 
 .nav__button:hover,
-.intro__button:hover {
+.intro__button:hover,
+.end__button:hover {
   background-color: #13070c;
   border: 2px solid #13070c;
   color: white;
 }
 
 .welcome,
-.intro {
+.intro,
+.end {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,13 +65,15 @@ body {
 }
 
 .welcome__title,
-.intro__title {
+.intro__title,
+.end__title {
   font-size: 70px;
   font-weight: 200;
 }
 
 .welcome__text,
-.intro__text {
+.intro__text,
+.end__text {
   font-size: 40px;
   font-weight: 200;
   margin-top: 1em;
@@ -149,6 +154,12 @@ input[type="text"]:focus {
 
 .taskView__button__icon:hover {
   color: #0d898b;
+}
+
+.end__button {
+  margin-top: 4em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .card {
