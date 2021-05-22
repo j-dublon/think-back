@@ -12,7 +12,7 @@ const EndView = () => {
   // ** ** ** ** EFFECTS ** ** ** **
   useEffect(() => {
     setCurrentPage('end')
-  }, [])
+  }, [setCurrentPage])
 
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **
@@ -21,7 +21,7 @@ const EndView = () => {
       <h2 className="end__title">{ `${userName}'s score:` }</h2>
       <h2 className="end__text">{ `Correct guesses: ${correct}` }</h2>
       <h2 className="end__text">{ `Errors: ${errors}` }</h2>
-      <a href="#" className="end__button">TRY AGAIN?</a>
+      <a href="/" className="end__button">TRY AGAIN?</a>
     </main>
   )
 }

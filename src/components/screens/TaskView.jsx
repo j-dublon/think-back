@@ -12,7 +12,7 @@ const TaskView = () => {
   // ** ** ** ** EFFECTS ** ** ** **
   useEffect(() => {
     setCurrentPage('task')
-  }, [])
+  }, [setCurrentPage])
 
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **

@@ -11,7 +11,7 @@ const IntroView = () => {
   // ** ** ** ** EFFECTS ** ** ** **
   useEffect(() => {
     setCurrentPage('intro')
-  }, [])
+  }, [setCurrentPage])
   
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **

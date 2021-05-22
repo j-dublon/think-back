@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import DataContext from "./DataContext";
 
-export default () => {
+const useData = () => {
   const context = useContext(DataContext);
 
   if (context === undefined) {
@@ -9,3 +9,5 @@ export default () => {
   }
   return context;
 };
+
+export default useData;
