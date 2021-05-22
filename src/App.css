@@ -144,23 +144,50 @@ input[type="text"]:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  height: 100vh;
 }
 
 .taskView__button {
   border: 0;
   border-radius: 5em;
   background-color: white;
-  margin-top: 5em;
+  position: absolute;
+  top: 58vh;
 }
 
 .taskView__button__icon:hover {
   color: #0d898b;
 }
 
+.taskView__button__start {
+  height: 12em;
+  width: 12em;
+  margin-top: 4em;
+  border-radius: 5rem;
+  background-color: #0d898b;
+  border: 0;
+}
+
+.taskView__button__start__text {
+  color: white;
+  font-size: 3em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+.taskView__button__start:hover {
+  background-color: #13070c;
+}
+
 .end__button {
   margin-top: 4em;
   padding-left: 3em;
   padding-right: 3em;
+}
+
+.fake__button {
+  margin-top: 15em;
 }
 
 .card {

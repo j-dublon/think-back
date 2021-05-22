@@ -1,9 +1,9 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({letter}) => {
   return (
     <main className="card">
-      <h2 className="card__title">A</h2>
+      <h2 className="card__title">{letter}</h2>
     </main>
   )
 }

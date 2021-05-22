@@ -1,16 +1,19 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Card from "../cards/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import useData from '../../data/useData';
 import { useNavigate } from "@reach/router"
 
 const TaskView = () => {
   // ** ** ** ** HOOKS ** ** ** **
-  const { setCurrentPage } = useData();
+  const { setCurrentPage, sequence } = useData();
   const navigate = useNavigate();
 
   // ** ** ** ** LOCAL ** ** ** **
+  const [start, setStart] = useState(false);
+  const [letterIndex, setLetterIndex] = useState(0);
+
   // ** ** ** ** EFFECTS ** ** ** **
   useEffect(() => {
     setCurrentPage('task')
@@ -20,16 +23,32 @@ const TaskView = () => {
   const onClickEnd = () => {
     navigate('/end')
   }
+
+  const onClickStart = () => {
+    setStart(true);
+  }
   
   // ** ** ** ** RENDER ** ** ** **
   return (
     <main className="taskView">
-      <Card />
-      <button className="taskView__button">
-        <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
-      </button>
-
-      <button className="end__button" onClick={onClickEnd}>
+      {
+        start === true ? (
+          <>
+            <Card letter={sequence[letterIndex]}/>
+            <button className="taskView__button">
+              <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
+            </button>
+          </>
+        )
+          :
+        (
+          <button className="taskView__button__start" onClick={onClickStart}>
+              <p className="taskView__button__start__text">START</p>
+          </button>
+        )
+      }
+      
+      <button className="fake__button" onClick={onClickEnd}>
         <p>END</p>
       </button>
 

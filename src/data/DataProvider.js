@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import DataContext from "./DataContext";
 
 export default function DataProvider(props) {
@@ -6,35 +6,38 @@ export default function DataProvider(props) {
 
   const [currentPage, setCurrentPage] = useState("home");
 
-  const sequence = [
-    "A",
-    "D",
-    "E",
-    "F",
-    "L",
-    "X",
-    "F",
-    "X",
-    "T",
-    "S",
-    "U",
-    "S",
-    "P",
-    "D",
-    "E",
-    "E",
-    "D",
-    "L",
-    "D",
-    "P",
-  ];
+  const sequence = useMemo(
+    () => [
+      "A",
+      "D",
+      "E",
+      "F",
+      "L",
+      "X",
+      "F",
+      "X",
+      "T",
+      "S",
+      "U",
+      "S",
+      "P",
+      "D",
+      "E",
+      "E",
+      "D",
+      "L",
+      "D",
+      "P",
+    ],
+    []
+  );
 
   const [falseAlarms, setFalseAlarms] = useState(0);
   const [misses, setMisses] = useState(0);
   const [matches, setMatches] = useState(0);
 
   // ** ** ** ** ** Memoize ** ** ** ** **
-  const values = React.useMemo(
+  const values = useMemo(
     () => ({
       userName,
       setUserName,
