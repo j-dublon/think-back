@@ -1,7 +1,6 @@
 import React from "react";
 import useData from '../../data/useData';
 
-const name = "Jodi";
 const correct = "17";
 const errors = "3";
 

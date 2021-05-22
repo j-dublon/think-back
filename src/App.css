@@ -111,6 +111,12 @@ body {
   color: #0d898b;
 }
 
+.welcome__error {
+  color: red;
+  margin-top: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
 input[type="text"]:focus {
   outline: none;
   border: 2px solid #0d898b;
