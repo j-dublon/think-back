@@ -26,9 +26,10 @@ body {
   font-weight: 200;
 }
 
-.nav__button {
+.nav__button,
+.intro__button {
   font-family: "Nanum Myeongjo", serif;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.1em;
   color: #0d8986;
   background-color: #eeeeff;
@@ -41,26 +42,33 @@ body {
   padding-bottom: 0.5em;
 }
 
-.nav__button:hover {
+.nav__button:hover,
+.intro__button:hover {
   background-color: #13070c;
   border: 2px solid #13070c;
   color: white;
 }
 
-.welcome {
+.welcome,
+.intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 15em;
   padding-top: 5em;
+  padding-left: 8em;
+  padding-right: 8em;
+  text-align: center;
 }
 
-.welcome__title {
+.welcome__title,
+.intro__title {
   font-size: 70px;
   font-weight: 200;
 }
 
-.welcome__text {
+.welcome__text,
+.intro__text {
   font-size: 40px;
   font-weight: 200;
   margin-top: 1em;
@@ -99,6 +107,23 @@ body {
 input[type="text"]:focus {
   outline: none;
   border: 2px solid #0d898b;
+}
+
+.intro__text__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.intro__text_icon {
+  margin-left: 0.7em;
+  margin-bottom: 0.1em;
+}
+
+.intro__button {
+  margin-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .taskView {
