@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import useData from '../../data/useData';
 
 const correct = "17";
@@ -6,9 +6,14 @@ const errors = "3";
 
 const EndView = () => {
   // ** ** ** ** HOOKS ** ** ** **
-  const { userName } = useData();
+  const { userName, setCurrentPage } = useData();
 
   // ** ** ** ** LOCAL ** ** ** **
+  // ** ** ** ** EFFECTS ** ** ** **
+  useEffect(() => {
+    setCurrentPage('end')
+  }, [])
+
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **
   return (

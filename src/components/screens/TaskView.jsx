@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Card from "../cards/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import useData from '../../data/useData';
 
 const TaskView = () => {
   // ** ** ** ** HOOKS ** ** ** **
+  const { setCurrentPage } = useData();
+
   // ** ** ** ** LOCAL ** ** ** **
+  // ** ** ** ** EFFECTS ** ** ** **
+  useEffect(() => {
+    setCurrentPage('task')
+  }, [])
+
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **
   return (

@@ -6,12 +6,14 @@ import { useNavigate } from "@reach/router"
 
 const WelcomeView = () => {
   // ** ** ** ** HOOKS ** ** ** **
-  const { setUserName } = useData();
+  const {setUserName } = useData();
   const navigate = useNavigate();
-
+  
   // ** ** ** ** LOCAL ** ** ** **
-  const [nameText, setNameText] = useState();
+  const [nameText, setNameText] = useState('');
   const [showError, setShowError] = useState(false);
+
+  // ** ** ** ** EFFECTS ** ** ** **
 
   // ** ** ** ** LOGIC ** ** ** **
   const handleChangeName = (event) => {
@@ -21,7 +23,7 @@ const WelcomeView = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!nameText) {
+    if (nameText.length === 0) {
       setShowError(true);
     } else {
       setShowError(false);

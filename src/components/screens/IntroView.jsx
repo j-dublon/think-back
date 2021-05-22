@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import useData from '../../data/useData';
 
 const IntroView = () => {
   // ** ** ** ** HOOKS ** ** ** **
-  const { userName } = useData();
+  const { userName, setCurrentPage } = useData();
 
   // ** ** ** ** LOCAL ** ** ** **
+  // ** ** ** ** EFFECTS ** ** ** **
+  useEffect(() => {
+    setCurrentPage('intro')
+  }, [])
+  
   // ** ** ** ** LOGIC ** ** ** **
   // ** ** ** ** RENDER ** ** ** **
   return (
