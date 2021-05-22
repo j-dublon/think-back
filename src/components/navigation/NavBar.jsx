@@ -2,8 +2,8 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav className="nav">
-      <a href="#">Somewhere</a>
+    <nav>
+      <a href="#" className="nav__button">Return to Start</a>
     </nav>
   )
 }

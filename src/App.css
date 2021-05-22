@@ -7,12 +7,13 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #f8f8ff;
+  background-color: #eeeeff;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: "100%";
   padding-left: 3em;
   padding-right: 3em;
@@ -25,6 +26,27 @@ body {
   font-weight: 200;
 }
 
+.nav__button {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #0d8986;
+  background-color: #eeeeff;
+  text-decoration: none;
+  border: 2px solid #0d898b;
+  border-radius: 1rem;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.nav__button:hover {
+  background-color: #13070c;
+  border: 2px solid #13070c;
+  color: white;
+}
+
 .taskView {
   padding-top: 7em;
   display: flex;
@@ -32,21 +54,39 @@ body {
   align-items: center;
 }
 
+.taskView__iconContainer {
+  width: 25em;
+  height: 9em;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.taskView__button {
+  border: 0;
+  border-radius: 5em;
+  background-color: white;
+}
+
+.taskView__button:hover {
+  background-color: #0d898b;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  background-color: #eeeeff;
+  background-color: #0d898b;
   height: 20em;
   width: 25em;
   border-radius: 2rem;
-  border: 2px solid #7e6cd7;
+  border: 2px solid white;
 }
 
 .card__title {
   font-family: "Roboto", sans-serif;
-  color: #0d898b;
+  color: #13070c;
   font-size: 190px;
   font-weight: 400;
 }
