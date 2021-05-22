@@ -14,7 +14,6 @@ const WelcomeView = () => {
   const [showError, setShowError] = useState(false);
 
   // ** ** ** ** EFFECTS ** ** ** **
-
   // ** ** ** ** LOGIC ** ** ** **
   const handleChangeName = (event) => {
     setNameText(event.target.value)
@@ -25,6 +24,7 @@ const WelcomeView = () => {
 
     if (nameText.length === 0) {
       setShowError(true);
+      return;
     } else {
       setShowError(false);
     }

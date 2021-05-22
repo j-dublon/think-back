@@ -6,6 +6,33 @@ export default function DataProvider(props) {
 
   const [currentPage, setCurrentPage] = useState("home");
 
+  const sequence = [
+    "A",
+    "D",
+    "E",
+    "F",
+    "L",
+    "X",
+    "F",
+    "X",
+    "T",
+    "S",
+    "U",
+    "S",
+    "P",
+    "D",
+    "E",
+    "E",
+    "D",
+    "L",
+    "D",
+    "P",
+  ];
+
+  const [falseAlarms, setFalseAlarms] = useState(0);
+  const [misses, setMisses] = useState(0);
+  const [matches, setMatches] = useState(0);
+
   // ** ** ** ** ** Memoize ** ** ** ** **
   const values = React.useMemo(
     () => ({
@@ -13,8 +40,27 @@ export default function DataProvider(props) {
       setUserName,
       currentPage,
       setCurrentPage,
+      sequence,
+      falseAlarms,
+      setFalseAlarms,
+      misses,
+      setMisses,
+      matches,
+      setMatches,
     }),
-    [userName, setUserName, currentPage, setCurrentPage]
+    [
+      userName,
+      setUserName,
+      currentPage,
+      setCurrentPage,
+      sequence,
+      falseAlarms,
+      setFalseAlarms,
+      misses,
+      setMisses,
+      matches,
+      setMatches,
+    ]
   );
 
   // ** ** ** ** ** Return ** ** ** ** **

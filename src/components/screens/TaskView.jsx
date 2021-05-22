@@ -8,7 +8,7 @@ import { useNavigate } from "@reach/router"
 const TaskView = () => {
   // ** ** ** ** HOOKS ** ** ** **
   const { setCurrentPage } = useData();
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // ** ** ** ** LOCAL ** ** ** **
   // ** ** ** ** EFFECTS ** ** ** **
@@ -25,14 +25,9 @@ const TaskView = () => {
   return (
     <main className="taskView">
       <Card />
-      <section className="taskView__iconContainer">
-        <button className="taskView__button">
-          <FontAwesomeIcon icon={ faTimesCircle } size="6x" color="#13070C" className="taskView__button__icon"/>
-        </button>
-        <button className="taskView__button">
-          <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
-        </button>
-      </section>
+      <button className="taskView__button">
+        <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
+      </button>
 
       <button className="end__button" onClick={onClickEnd}>
         <p>END</p>

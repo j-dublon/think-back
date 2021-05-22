@@ -134,7 +134,7 @@ input[type="text"]:focus {
 }
 
 .intro__button {
-  margin-top: 2em;
+  margin-top: 4em;
   padding-left: 3em;
   padding-right: 3em;
 }
@@ -146,18 +146,11 @@ input[type="text"]:focus {
   align-items: center;
 }
 
-.taskView__iconContainer {
-  width: 25em;
-  height: 9em;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
 .taskView__button {
   border: 0;
   border-radius: 5em;
   background-color: white;
+  margin-top: 5em;
 }
 
 .taskView__button__icon:hover {
