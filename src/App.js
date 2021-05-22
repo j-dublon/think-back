@@ -9,8 +9,8 @@ import DataProvider from "./data/DataProvider";
 
 function App() {
   return (
-    <body>
-      <DataProvider>
+    <DataProvider>
+      <>
         <header className="header">
           <h1 className="header__title">Think Back</h1>
           <NavBar />
@@ -26,8 +26,8 @@ function App() {
         <footer className="footer">
           <p className="footer__text">© 2021 Think Back</p>
         </footer>
-      </DataProvider>
-    </body>
+      </>
+    </DataProvider>
   );
 }
 
