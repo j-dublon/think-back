@@ -8,6 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #eeeeff;
+  position: relative;
+  height: 100vh;
 }
 
 .header {
@@ -179,4 +181,16 @@ input[type="text"]:focus {
   color: #13070c;
   font-size: 190px;
   font-weight: 400;
+}
+
+.footer {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
+.footer__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #0d898b;
 }
