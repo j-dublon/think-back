@@ -2,10 +2,12 @@ import React, {useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import useData from '../../data/useData';
+import { useNavigate } from "@reach/router"
 
 const IntroView = () => {
   // ** ** ** ** HOOKS ** ** ** **
   const { userName, setCurrentPage } = useData();
+  const navigate = useNavigate();
 
   // ** ** ** ** LOCAL ** ** ** **
   // ** ** ** ** EFFECTS ** ** ** **
@@ -14,6 +16,10 @@ const IntroView = () => {
   }, [setCurrentPage])
   
   // ** ** ** ** LOGIC ** ** ** **
+  const onClickStart = () => {
+    navigate('/task')
+   }
+  
   // ** ** ** ** RENDER ** ** ** **
   return (
     <main className="intro">
@@ -28,7 +34,9 @@ const IntroView = () => {
         <FontAwesomeIcon icon={ faTimesCircle } size="2x" color="#13070c" className="intro__text_icon"/>
       </div>
       <h4 className="intro__text">Ready?</h4>
-      <a href="/task" className="intro__button">START</a>
+      <button className="intro__button" onClick={onClickStart}>
+        <p>START</p>
+      </button>
     </main>
   )
 }

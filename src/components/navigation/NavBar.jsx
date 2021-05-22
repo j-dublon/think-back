@@ -7,7 +7,7 @@ const NavBar = () => {
 
   // ** ** ** ** LOCAL ** ** ** **
   const text = (currentPage === 'intro') ? 'SKIP INTRO' : 'END TASK';
-  const link = (currentPage === 'intro') ? '/task' : '/end';
+  const link = (currentPage === 'intro') ? '/task' : '/';
 
   // ** ** ** ** LOGIC ** ** ** **
 

@@ -6,7 +6,7 @@ import { useNavigate } from "@reach/router"
 
 const WelcomeView = () => {
   // ** ** ** ** HOOKS ** ** ** **
-  const {setUserName } = useData();
+  const {setUserName} = useData();
   const navigate = useNavigate();
   
   // ** ** ** ** LOCAL ** ** ** **
