@@ -10,7 +10,7 @@ export default function DataProvider(props) {
     () => [
       "A",
       "D",
-      "E",
+      "A",
       "F",
       "L",
       "X",
@@ -23,8 +23,8 @@ export default function DataProvider(props) {
       "P",
       "D",
       "E",
-      "O",
       "D",
+      "O",
       "L",
       "D",
       "P",
