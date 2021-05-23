@@ -29,6 +29,8 @@ const TaskView = () => {
   useEffect(() => {
     if (letterIndex === 20) navigate('/end');
   }, [letterIndex, navigate])
+
+  // ** ** ** ** LOGIC ** ** ** **
   
   // ** ** ** ** RENDER ** ** ** **
   return (
