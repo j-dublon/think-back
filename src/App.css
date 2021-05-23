@@ -199,7 +199,8 @@ input[type="text"]:focus {
   height: 20em;
   width: 25em;
   border-radius: 2rem;
-  border: 2px solid white;
+  border: 1px solid #13070c;
+  box-shadow: 2px 2px 3px #605459;
 }
 
 .card__title {

@@ -23,7 +23,7 @@ export default function DataProvider(props) {
       "P",
       "D",
       "E",
-      "E",
+      "O",
       "D",
       "L",
       "D",

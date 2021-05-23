@@ -11,7 +11,6 @@ const TaskView = () => {
   const navigate = useNavigate();
 
   // ** ** ** ** LOCAL ** ** ** **
-  const [start, setStart] = useState(false);
   const [letterIndex, setLetterIndex] = useState(0);
 
   // ** ** ** ** EFFECTS ** ** ** **
@@ -19,39 +18,25 @@ const TaskView = () => {
     setCurrentPage('task')
   }, [setCurrentPage])
 
-  // ** ** ** ** LOGIC ** ** ** **
-  const onClickEnd = () => {
-    navigate('/end')
-  }
+  useEffect(() => {
+    let timer = setInterval(() => {
+      setLetterIndex(prev => prev + 1)
+    }, 2000);
 
-  const onClickStart = () => {
-    setStart(true);
-  }
+    return () => clearInterval(timer);
+  }, [setLetterIndex])
+
+  useEffect(() => {
+    if (letterIndex === 20) navigate('/end');
+  }, [letterIndex, navigate])
   
   // ** ** ** ** RENDER ** ** ** **
   return (
     <main className="taskView">
-      {
-        start === true ? (
-          <>
-            <Card letter={sequence[letterIndex]}/>
-            <button className="taskView__button">
-              <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
-            </button>
-          </>
-        )
-          :
-        (
-          <button className="taskView__button__start" onClick={onClickStart}>
-              <p className="taskView__button__start__text">START</p>
-          </button>
-        )
-      }
-      
-      <button className="fake__button" onClick={onClickEnd}>
-        <p>END</p>
+      <Card letter={sequence[letterIndex]}/>
+      <button className="taskView__button">
+        <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
       </button>
-
     </main>
   )
 }
