@@ -186,10 +186,6 @@ input[type="text"]:focus {
   padding-right: 3em;
 }
 
-.fake__button {
-  margin-top: 15em;
-}
-
 .card {
   display: flex;
   flex-direction: column;

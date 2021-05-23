@@ -6,8 +6,7 @@ const NavBar = () => {
   const { currentPage } = useData();
 
   // ** ** ** ** LOCAL ** ** ** **
-  const text = (currentPage === 'intro') ? 'SKIP INTRO' : 'END TASK';
-  const link = (currentPage === 'intro') ? '/task' : '/';
+  const text = (currentPage === 'intro') ? 'START AGAIN' : 'END TASK';
 
   // ** ** ** ** LOGIC ** ** ** **
 
@@ -16,7 +15,7 @@ const NavBar = () => {
 
   return (
     <nav>
-      <a href={link} className="nav__button">{ text }</a>
+      <a href='/' className="nav__button">{ text }</a>
     </nav>
   )
 }
