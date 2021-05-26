@@ -37,7 +37,7 @@ const TaskView = () => {
     <main className="taskView">
       <Card letter={sequence[letterIndex]}/>
       <button className="taskView__button">
-        <FontAwesomeIcon icon={faCheckCircle} size="6x" color="#13070C" className="taskView__button__icon"/>
+        <FontAwesomeIcon icon={faCheckCircle} color="#13070C" className="taskView__button__icon"/>
       </button>
     </main>
   )
