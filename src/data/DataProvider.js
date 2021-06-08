@@ -32,6 +32,7 @@ export default function DataProvider(props) {
     []
   );
 
+  const [expectedMatches, setExpectedMatches] = useState(0);
   const [falseAlarms, setFalseAlarms] = useState(0);
   const [misses, setMisses] = useState(0);
   const [matches, setMatches] = useState(0);
@@ -50,6 +51,8 @@ export default function DataProvider(props) {
       setMisses,
       matches,
       setMatches,
+      expectedMatches,
+      setExpectedMatches,
     }),
     [
       userName,
@@ -63,6 +66,8 @@ export default function DataProvider(props) {
       setMisses,
       matches,
       setMatches,
+      expectedMatches,
+      setExpectedMatches,
     ]
   );
 
